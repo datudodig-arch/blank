@@ -280,3 +280,17 @@ footer {
     padding: 12px 18px;
   }
 }
+/* ... (keep all previous styles) */
+
+/* Empty Page Style */
+.empty-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.5rem;
+  color: #ff4d6d;
+  text-align: center;
+  padding: 20px;
+}
