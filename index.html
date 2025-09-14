@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our 3rd Anniversary</title>
+
+  <!-- Heart favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22%23ff4d6d%22><path d=%22M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z%22/></svg>" type="image/svg+xml" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Falling hearts canvas -->
+  <canvas id="hearts-canvas"></canvas>
+
+  <!-- Background music -->
+  <audio id="bg-music" loop>
+    <!-- Insert your music file here -->
+    <source src="your-music-file.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+  <div id="music-controls">
+    <button id="music-toggle" aria-label="Play/Pause Music">▶️</button>
+  </div>
+
+  <main>
+    <!-- Hero Section: Love Letter -->
+    <section id="hero">
+      <h1>My Dearest Love,</h1>
+      <p id="love-letter">
+        <!-- Insert your sweet love letter/message here -->
+        Every moment with you is a treasure. Happy 3rd anniversary, my heart beats only for you.
+      </p>
+    </section>
+
+    <!-- Photo Album Section -->
+    <section id="photo-album">
+      <h2>Our Memories</h2>
+      <div id="book-container">
+        <div id="book">
+          <!-- Pages will be dynamically generated here -->
+        </div>
+        <div id="book-controls">
+          <button id="prev-page" aria-label="Previous Page">← Prev</button>
+          <span id="page-indicator">Page 1 / 10</span>
+          <button id="next-page" aria-label="Next Page">Next →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Countdown Timer Section -->
+    <section id="countdown">
+      <h2>Counting Down to Our Next Meetup</h2>
+      <div id="timer">
+        <div class="time-segment">
+          <span id="days">00</span>
+          <span class="label">Days ❤️</span>
+        </div>
+        <div class="time-segment">
+          <span id="hours">00</span>
+          <span class="label">Hours ❤️</span>
+        </div>
+        <div class="time-segment">
+          <span id="minutes">00</span>
+          <span class="label">Minutes ❤️</span>
+        </div>
+        <div class="time-segment">
+          <span id="seconds">00</span>
+          <span class="label">Seconds ❤️</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    From <span id="my-name">[My Name]</span> to <span id="her-name">[Her Name]</span>, Happy 3rd Anniversary ❤️
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
