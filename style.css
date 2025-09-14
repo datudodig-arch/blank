@@ -1,0 +1,282 @@
+/* General Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(135deg, #ffe6f0, #ffccd9);
+  color: #4a2c3a;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  padding-bottom: 60px; /* for footer */
+}
+
+/* Canvas covers entire viewport */
+#hearts-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Music Controls */
+#music-controls {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 10;
+}
+
+#music-toggle {
+  background: #ff4d6d;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 0 8px #ff4d6daa;
+  transition: background-color 0.3s ease;
+}
+
+#music-toggle:hover {
+  background: #ff1a3c;
+  box-shadow: 0 0 12px #ff1a3ccc;
+}
+
+/* Main content */
+main {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+  text-align: center;
+}
+
+/* Hero Section */
+#hero {
+  margin-bottom: 60px;
+  font-family: 'Dancing Script', cursive;
+  color: #b33951;
+  text-shadow: 1px 1px 3px #fff0f5;
+}
+
+#hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  user-select: none;
+}
+
+#love-letter {
+  font-size: 1.5rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  background: rgba(255, 204, 217, 0.3);
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #ffb6c1aa;
+  user-select: text;
+}
+
+/* Photo Album Section */
+#photo-album {
+  margin-bottom: 60px;
+}
+
+#photo-album h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.8rem;
+  margin-bottom: 25px;
+  color: #d6336c;
+  user-select: none;
+}
+
+/* Book container */
+#book-container {
+  perspective: 1500px;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Book */
+#book {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  margin: 0 auto 20px;
+  transform-style: preserve-3d;
+  transition: transform 1s ease;
+  box-shadow: 0 10px 30px rgba(255, 77, 109, 0.3);
+  border-radius: 15px;
+  background: #fff0f5;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Each page */
+.page {
+  width: 50%;
+  height: 100%;
+  background: white;
+  box-shadow: inset 0 0 15px #ffb6c1aa;
+  border-radius: 0 15px 15px 0;
+  overflow: hidden;
+  position: relative;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.page.left {
+  border-radius: 15px 0 0 15px;
+  box-shadow: inset 0 0 15px #ffb6c1aa;
+}
+
+.page img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(255, 77, 109, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.page:hover img {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 6px #ff4d6d);
+}
+
+/* Book controls */
+#book-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#book-controls button {
+  background: #ff4d6d;
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 0 8px #ff4d6daa;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+#book-controls button:hover {
+  background: #ff1a3c;
+  box-shadow: 0 0 12px #ff1a3ccc;
+}
+
+#page-indicator {
+  font-weight: 600;
+  color: #b33951;
+  user-select: none;
+}
+
+/* Countdown Timer Section */
+#countdown {
+  font-family: 'Dancing Script', cursive;
+  color: #d6336c;
+  margin-bottom: 40px;
+  user-select: none;
+}
+
+#countdown h2 {
+  font-size: 2.8rem;
+  margin-bottom: 25px;
+}
+
+#timer {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.time-segment {
+  background: #ffe6f0;
+  padding: 15px 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #ffb6c1aa;
+  min-width: 90px;
+  user-select: text;
+  transition: box-shadow 0.3s ease;
+}
+
+.time-segment:hover {
+  box-shadow: 0 0 25px #ff4d6dcc;
+}
+
+.time-segment span {
+  display: block;
+}
+
+.label {
+  font-size: 1rem;
+  margin-top: 5px;
+  color: #b33951;
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #ffccd9;
+  color: #b33951;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 12px 10px;
+  box-shadow: 0 -2px 10px #ff4d6d88;
+  user-select: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 2.5rem;
+  }
+
+  #love-letter {
+    font-size: 1.2rem;
+    padding: 15px 20px;
+  }
+
+  #photo-album #book {
+    height: 300px;
+  }
+
+  #countdown #timer {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .time-segment {
+    min-width: 70px;
+    font-size: 1.5rem;
+    padding: 12px 18px;
+  }
+}
